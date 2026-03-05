@@ -1,0 +1,262 @@
+:root {
+  --primary-color: #6366f1;   
+  --bg-body: #fdfdfd;          
+  --bg-card: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --border-color: #f3f4f6;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.portfolio-container {
+  display: flex;
+  min-height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  width: 380px;
+  background-color: #fff;
+  padding: 60px 40px;
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  position: sticky; /* Giữ Sidebar đứng yên khi cuộn trang */
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Avatar với viền Gradient */
+.avatar-wrapper {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #a78bfa, #f472b6, #fbbf24);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  border: 3px solid #fff;
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.name {
+  font-family: 'Playfair Display', serif; /* Font có chân sang trọng */
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.job-title {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: 800;
+}
+
+/* Social Buttons */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 20px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.social-btn:hover {
+  background-color: #f3f4f6;
+  color: var(--text-main);
+  transform: translateX(5px);
+}
+
+.intro-text {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.skill-tag {
+  background: #f3f4f6;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+/* 4. MAIN CONTENT (BÊN PHẢI) */
+.main-content {
+  flex: 1;
+  padding: 80px 60px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #9ca3af;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.header-line {
+  height: 1px;
+  background-color: var(--border-color);
+  width: 100%;
+}
+
+/* Project Cards */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-card {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+  border-color: #e5e7eb;
+}
+
+.project-icon {
+  font-size: 32px;
+  width: 70px;
+  height: 70px;
+  background: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  margin-right: 25px;
+}
+
+.project-info h3 {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.project-tech {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.project-tech span {
+  font-size: 11px;
+  background: #eef2ff;
+  color: var(--primary-color);
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.project-meta {
+  margin-left: auto;
+  text-align: right;
+}
+
+.year {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #d1d5db;
+  margin-bottom: 5px;
+}
+
+.arrow {
+  font-size: 24px;
+  color: #e5e7eb;
+  transition: var(--transition);
+}
+
+.project-card:hover .arrow {
+  color: var(--primary-color);
+  transform: translateX(3px);
+}
+
+/* 5. RESPONSIVE (Dành cho Mobile) */
+@media (max-width: 900px) {
+  .portfolio-container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    padding: 40px 20px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .main-content {
+    padding: 40px 20px;
+  }
+}
